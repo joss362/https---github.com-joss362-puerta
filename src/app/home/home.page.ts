@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SupabaseService } from '../services/supabase.service';
+import { NgFor } from '@angular/common';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
