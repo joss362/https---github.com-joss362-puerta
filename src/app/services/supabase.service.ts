@@ -6,10 +6,10 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class SupabaseService {
-  private supabase=createClient(environment.supabaseURL,environment.supabaseKey)
+  private supabase=createClient(environment.supabaseURL,environment.supabaseKey);
   constructor() { }
   async getSensorReadings(){
-    const{data,error}= await this this.supabase
+    const{data,error}= await this.supabase
     .from('movimiento')
     .select('Distancia(cm)');
     if(error){
