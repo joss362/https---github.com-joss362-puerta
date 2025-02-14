@@ -11,7 +11,7 @@ export class SupabaseService {
   async getSensorReadings(){
     const{data,error}= await this.supabase
     .from('movimientos')
-    .select('distancia');
+    .select('id,distancia');
     if(error){
       console.error('Error al obtener datos',error);
       return[];
